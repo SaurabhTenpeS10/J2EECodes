@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<style type="text/css">
+/* Resetting default margins, paddings, and box-sizing */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Styling the form container */
+.form-container {
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+	width: 350px;
+	animation: fadeIn 1s ease-out;
+}
+
+/* Styling the table */
+table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0 15px;
+}
+
+/* Styling the table cells */
+td {
+	padding: 10px 0;
+	font-size: 16px;
+	color: #333;
+}
+
+/* Styling the input fields */
+input[type="text"], input[type="password"] {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 16px;
+	transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+	border-color: #4CAF50;
+	box-shadow: 0 0 10px rgba(76, 175, 80, 0.1);
+}
+
+/* Styling the Login button */
+button {
+	width: 100%;
+	padding: 12px;
+	margin-top: 20px;
+	border: none;
+	background-color: #4CAF50;
+	color: white;
+	font-size: 18px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+	background-color: #45a049;
+	transform: translateY(-2px);
+}
+
+/* Fade-in animation for the form 
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+} */
+
+/* Aligning the form container within the div */
+.form-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+</style>
+</head>
+<body>
+	<div class="form-wrapper">
+		<div class="form-container">
+			<form action="./login" method="post">
+				<table>
+					<tr>
+						<td>Username</td>
+						<td><input type="text" placeholder="Enter your username" name="username"></td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td><input type="password" placeholder="Enter your password" name="password"></td>
+					</tr>
+				</table>
+				<button type="submit">Login</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
