@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.jspiders.springcore1.bean.DatabaseConnection" scope="prototype" name="connection1">
+		<property name="url" value="jdbc:mysql://localhost:3306" />
+		<property name="user" value="Ramesh" />
+		<property name="password" value="Ramesh@1234" />
+	</bean>
+	
+	<bean class="com.jspiders.springcore1.bean.DatabaseConnection" scope="singleton" name="connection2">
+		<property name="url" value="jdbc:mysql://localhost:3306" />
+		<property name="user" value="Suresh" />
+		<property name="password" value="Suresh@1234" />
+	</bean>
+	
+	
+	<bean class="com.jspiders.springcore1.bean.DataAccessObject"
+		scope="prototype" name="dao1">
+		<property name="connection" ref="connection1" />
+	</bean>
+
+	<bean class="com.jspiders.springcore1.bean.DataAccessObject"
+		scope="prototype" name="dao2">
+		<property name="connection" ref="connection2" />
+	</bean>
+
+</beans>
